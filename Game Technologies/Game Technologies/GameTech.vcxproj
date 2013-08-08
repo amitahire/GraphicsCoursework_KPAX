@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{723E5C0B-4C6D-487C-9F94-A2933B764980}</ProjectGuid>
+    <RootNamespace>GameTech</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>..\..\GLEW\include;..\..\SOIL;..\..\;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\GLEW\lib;..\..\SOIL\$(Configuration);..\$(Configuration)\;.\nclgl\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\..\GLEW\include;..\..\SOIL;..\..\;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\GLEW\lib;..\..\SOIL\$(Configuration);..\$(Configuration)\;..\..\nclgl\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Ball_Spring_Chain.cpp" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="CubeBox0.cpp" />
+    <ClCompile Include="CubeBox1.cpp" />
+    <ClCompile Include="FirstProjectile.cpp" />
+    <ClCompile Include="GameClass.cpp" />
+    <ClCompile Include="GameEntity.cpp" />
+    <ClCompile Include="KPAXPhysicsNode.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MoveCube.cpp" />
+    <ClCompile Include="MoveSphere.cpp" />
+    <ClCompile Include="MoveSpherePhy.cpp" />
+    <ClCompile Include="MyGame.cpp" />
+    <ClCompile Include="PhysicsNode.cpp" />
+    <ClCompile Include="PhysicsSystem.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Spring.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ball_Spring_Chain.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="CubeBox0.h" />
+    <ClInclude Include="CubeBox1.h" />
+    <ClInclude Include="FirstProjectile.h" />
+    <ClInclude Include="GameClass.h" />
+    <ClInclude Include="GameEntity.h" />
+    <ClInclude Include="KPAXPhysicsNode.h" />
+    <ClInclude Include="MoveCube.h" />
+    <ClInclude Include="MoveSphere.h" />
+    <ClInclude Include="MoveSpherePhy.h" />
+    <ClInclude Include="MyGame.h" />
+    <ClInclude Include="PhysicsNode.h" />
+    <ClInclude Include="PhysicsSystem.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Spring.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Shaders\debugVertex.glsl" />
+    <None Include="..\..\Shaders\fragment.glsl" />
+    <None Include="..\..\Shaders\geometry.glsl" />
+    <None Include="..\..\Shaders\PerPixelFragment.glsl" />
+    <None Include="..\..\Shaders\PerPixelVertex.glsl" />
+    <None Include="..\..\Shaders\SceneFragment.glsl" />
+    <None Include="..\..\Shaders\SceneVertex.glsl" />
+    <None Include="..\..\Shaders\SeaFrag.glsl" />
+    <None Include="..\..\Shaders\SeaVertex.glsl" />
+    <None Include="..\..\Shaders\skyboxFragment.glsl" />
+    <None Include="..\..\Shaders\skyboxVertex.glsl" />
+    <None Include="..\..\Shaders\TechFragment.glsl" />
+    <None Include="..\..\Shaders\TechVertex.glsl" />
+    <None Include="..\..\Shaders\TexturedFragment.glsl" />
+    <None Include="..\..\Shaders\TexturedVertex.glsl" />
+    <None Include="..\..\Shaders\vertex.glsl" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="log.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
